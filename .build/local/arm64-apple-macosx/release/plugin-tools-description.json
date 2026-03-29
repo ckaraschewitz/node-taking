@@ -1,0 +1,295 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.NodeTaking-arm64-apple-macosx26.0-release.module" : {
+      "executable" : "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "fileList" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/NodeTaking.build/sources",
+      "importPath" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/Sources/MinimalMarkdownNotes/EditorBridge.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/Sources/MinimalMarkdownNotes/MinimalMarkdownNotesApp.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/Sources/MinimalMarkdownNotes/Models.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/Sources/MinimalMarkdownNotes/VaultStore.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/Sources/MinimalMarkdownNotes/Views.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/swift-version--1AB21518FC5DEDBE.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/NodeTaking.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "NodeTaking",
+      "moduleOutputPath" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/Modules/NodeTaking.swiftmodule",
+      "objects" : [
+        "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/NodeTaking.build/EditorBridge.swift.o",
+        "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/NodeTaking.build/MinimalMarkdownNotesApp.swift.o",
+        "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/NodeTaking.build/Models.swift.o",
+        "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/NodeTaking.build/VaultStore.swift.o",
+        "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/NodeTaking.build/Views.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-whole-module-optimization",
+        "-num-threads",
+        "12",
+        "-serialize-diagnostics",
+        "-O",
+        "-j12",
+        "-DSWIFT_PACKAGE",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "NodeTaking_main",
+        "-swift-version",
+        "6",
+        "-I",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-L",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-plugin-path",
+        "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "____node_taking"
+      ],
+      "outputFileMapPath" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/NodeTaking.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/NodeTaking.build/EditorBridge.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/NodeTaking.build/MinimalMarkdownNotesApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/NodeTaking.build/Models.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/NodeTaking.build/VaultStore.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/NodeTaking.build/Views.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/Modules/NodeTaking.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/D062085/Desktop/Code Projects/1 - Node taking/Sources/MinimalMarkdownNotes/EditorBridge.swift",
+        "/Users/D062085/Desktop/Code Projects/1 - Node taking/Sources/MinimalMarkdownNotes/MinimalMarkdownNotesApp.swift",
+        "/Users/D062085/Desktop/Code Projects/1 - Node taking/Sources/MinimalMarkdownNotes/Models.swift",
+        "/Users/D062085/Desktop/Code Projects/1 - Node taking/Sources/MinimalMarkdownNotes/VaultStore.swift",
+        "/Users/D062085/Desktop/Code Projects/1 - Node taking/Sources/MinimalMarkdownNotes/Views.swift"
+      ],
+      "tempsPath" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/NodeTaking.build",
+      "wholeModuleOptimization" : true
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "NodeTaking" : [
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "-module-name",
+      "NodeTaking",
+      "-package-name",
+      "____node_taking",
+      "-c",
+      "/Users/D062085/Desktop/Code Projects/1 - Node taking/Sources/MinimalMarkdownNotes/EditorBridge.swift",
+      "/Users/D062085/Desktop/Code Projects/1 - Node taking/Sources/MinimalMarkdownNotes/MinimalMarkdownNotesApp.swift",
+      "/Users/D062085/Desktop/Code Projects/1 - Node taking/Sources/MinimalMarkdownNotes/Models.swift",
+      "/Users/D062085/Desktop/Code Projects/1 - Node taking/Sources/MinimalMarkdownNotes/VaultStore.swift",
+      "/Users/D062085/Desktop/Code Projects/1 - Node taking/Sources/MinimalMarkdownNotes/Views.swift",
+      "-I",
+      "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-whole-module-optimization",
+      "-num-threads",
+      "12",
+      "-serialize-diagnostics",
+      "-O",
+      "-j12",
+      "-DSWIFT_PACKAGE",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "NodeTaking_main",
+      "-swift-version",
+      "6",
+      "-I",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-L",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-plugin-path",
+      "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "____node_taking",
+      "-driver-use-frontend-path",
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "NodeTaking" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/NodeTaking.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/Sources/MinimalMarkdownNotes/EditorBridge.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/Sources/MinimalMarkdownNotes/MinimalMarkdownNotesApp.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/Sources/MinimalMarkdownNotes/Models.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/Sources/MinimalMarkdownNotes/VaultStore.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/Sources/MinimalMarkdownNotes/Views.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/NodeTaking.build/sources"
+    },
+    "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/NodeTaking.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/NodeTaking.build/EditorBridge.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/NodeTaking.build/MinimalMarkdownNotesApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/NodeTaking.build/Models.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/NodeTaking.build/VaultStore.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/NodeTaking.build/Views.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/NodeTaking.product/Objects.LinkFileList"
+    },
+    "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/swift-version--1AB21518FC5DEDBE.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/local/arm64-apple-macosx/release/swift-version--1AB21518FC5DEDBE.txt"
+    }
+  }
+}

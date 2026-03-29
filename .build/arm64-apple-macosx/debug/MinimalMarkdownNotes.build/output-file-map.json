@@ -1,0 +1,40 @@
+{
+  "": {
+    "swift-dependencies": "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/arm64-apple-macosx/debug/MinimalMarkdownNotes.build/master.swiftdeps"
+  },
+  "/Users/D062085/Desktop/Code Projects/1 - Node taking/Sources/MinimalMarkdownNotes/EditorBridge.swift": {
+    "dependencies": "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/arm64-apple-macosx/debug/MinimalMarkdownNotes.build/EditorBridge.d",
+    "object": "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/arm64-apple-macosx/debug/MinimalMarkdownNotes.build/EditorBridge.swift.o",
+    "swiftmodule": "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/arm64-apple-macosx/debug/MinimalMarkdownNotes.build/EditorBridge~partial.swiftmodule",
+    "swift-dependencies": "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/arm64-apple-macosx/debug/MinimalMarkdownNotes.build/EditorBridge.swiftdeps",
+    "diagnostics": "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/arm64-apple-macosx/debug/MinimalMarkdownNotes.build/EditorBridge.dia"
+  },
+  "/Users/D062085/Desktop/Code Projects/1 - Node taking/Sources/MinimalMarkdownNotes/MinimalMarkdownNotesApp.swift": {
+    "dependencies": "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/arm64-apple-macosx/debug/MinimalMarkdownNotes.build/MinimalMarkdownNotesApp.d",
+    "object": "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/arm64-apple-macosx/debug/MinimalMarkdownNotes.build/MinimalMarkdownNotesApp.swift.o",
+    "swiftmodule": "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/arm64-apple-macosx/debug/MinimalMarkdownNotes.build/MinimalMarkdownNotesApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/arm64-apple-macosx/debug/MinimalMarkdownNotes.build/MinimalMarkdownNotesApp.swiftdeps",
+    "diagnostics": "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/arm64-apple-macosx/debug/MinimalMarkdownNotes.build/MinimalMarkdownNotesApp.dia"
+  },
+  "/Users/D062085/Desktop/Code Projects/1 - Node taking/Sources/MinimalMarkdownNotes/Models.swift": {
+    "dependencies": "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/arm64-apple-macosx/debug/MinimalMarkdownNotes.build/Models.d",
+    "object": "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/arm64-apple-macosx/debug/MinimalMarkdownNotes.build/Models.swift.o",
+    "swiftmodule": "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/arm64-apple-macosx/debug/MinimalMarkdownNotes.build/Models~partial.swiftmodule",
+    "swift-dependencies": "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/arm64-apple-macosx/debug/MinimalMarkdownNotes.build/Models.swiftdeps",
+    "diagnostics": "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/arm64-apple-macosx/debug/MinimalMarkdownNotes.build/Models.dia"
+  },
+  "/Users/D062085/Desktop/Code Projects/1 - Node taking/Sources/MinimalMarkdownNotes/VaultStore.swift": {
+    "dependencies": "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/arm64-apple-macosx/debug/MinimalMarkdownNotes.build/VaultStore.d",
+    "object": "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/arm64-apple-macosx/debug/MinimalMarkdownNotes.build/VaultStore.swift.o",
+    "swiftmodule": "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/arm64-apple-macosx/debug/MinimalMarkdownNotes.build/VaultStore~partial.swiftmodule",
+    "swift-dependencies": "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/arm64-apple-macosx/debug/MinimalMarkdownNotes.build/VaultStore.swiftdeps",
+    "diagnostics": "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/arm64-apple-macosx/debug/MinimalMarkdownNotes.build/VaultStore.dia"
+  },
+  "/Users/D062085/Desktop/Code Projects/1 - Node taking/Sources/MinimalMarkdownNotes/Views.swift": {
+    "dependencies": "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/arm64-apple-macosx/debug/MinimalMarkdownNotes.build/Views.d",
+    "object": "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/arm64-apple-macosx/debug/MinimalMarkdownNotes.build/Views.swift.o",
+    "swiftmodule": "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/arm64-apple-macosx/debug/MinimalMarkdownNotes.build/Views~partial.swiftmodule",
+    "swift-dependencies": "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/arm64-apple-macosx/debug/MinimalMarkdownNotes.build/Views.swiftdeps",
+    "diagnostics": "/Users/D062085/Desktop/Code Projects/1 - Node taking/.build/arm64-apple-macosx/debug/MinimalMarkdownNotes.build/Views.dia"
+  }
+}
