@@ -249,6 +249,22 @@ final class VaultStore: ObservableObject {
         scheduleSave(note: notes[index], previous: previous)
     }
 
+    func renameNote(noteID: UUID, to newName: String) {
+        guard let index = notes.firstIndex(where: { $0.id == noteID }) else { return }
+        let trimmed = newName.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return }
+
+        let previous = notes[index]
+        notes[index].title = trimmed
+        notes[index].fileNameStem = availableFileNameStem(
+            for: trimmed,
+            in: notes[index].relativeFolderPath,
+            excluding: noteID
+        )
+        notes[index].updatedAt = Date()
+        scheduleSave(note: notes[index], previous: previous, delayNanoseconds: 0)
+    }
+
     func updateBody(for noteID: UUID, body: String) {
         guard let index = notes.firstIndex(where: { $0.id == noteID }) else { return }
         let previous = notes[index]

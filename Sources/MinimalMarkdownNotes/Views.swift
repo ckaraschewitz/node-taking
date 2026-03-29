@@ -4,6 +4,7 @@ struct ContentView: View {
     @EnvironmentObject private var store: VaultStore
     @EnvironmentObject private var editorBridge: EditorBridge
     @State private var folderSheetMode: FolderSheetMode?
+    @State private var noteSheetMode: NoteSheetMode?
 
     var body: some View {
         Group {
@@ -11,10 +12,10 @@ struct ContentView: View {
                 EmptyWorkspaceView()
             } else {
                 NavigationSplitView {
-                    SidebarView(folderSheetMode: $folderSheetMode)
+                    SidebarView(folderSheetMode: $folderSheetMode, noteSheetMode: $noteSheetMode)
                         .navigationSplitViewColumnWidth(min: 280, ideal: 330)
                 } detail: {
-                    DetailView()
+                    DetailView(noteSheetMode: $noteSheetMode)
                 }
             }
         }
@@ -43,6 +44,10 @@ struct ContentView: View {
         }
         .sheet(item: $folderSheetMode) { mode in
             FolderSheet(mode: mode)
+                .environmentObject(store)
+        }
+        .sheet(item: $noteSheetMode) { mode in
+            NoteSheet(mode: mode)
                 .environmentObject(store)
         }
         .alert(
@@ -101,6 +106,7 @@ private struct EmptyWorkspaceView: View {
 private struct SidebarView: View {
     @EnvironmentObject private var store: VaultStore
     @Binding var folderSheetMode: FolderSheetMode?
+    @Binding var noteSheetMode: NoteSheetMode?
 
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
@@ -117,7 +123,7 @@ private struct SidebarView: View {
 
             switch store.selectedLens {
             case .hierarchy:
-                HierarchyLensView(folderSheetMode: $folderSheetMode)
+                HierarchyLensView(folderSheetMode: $folderSheetMode, noteSheetMode: $noteSheetMode)
             case .timeline:
                 TimelineLensView()
             case .canvas:
@@ -133,6 +139,7 @@ private struct HierarchyLensView: View {
     @EnvironmentObject private var store: VaultStore
     @EnvironmentObject private var editorBridge: EditorBridge
     @Binding var folderSheetMode: FolderSheetMode?
+    @Binding var noteSheetMode: NoteSheetMode?
 
     var body: some View {
         VStack(spacing: 10) {
@@ -159,7 +166,7 @@ private struct HierarchyLensView: View {
                     case .folder:
                         FolderRow(folderSheetMode: $folderSheetMode, item: item)
                     case let .note(noteID):
-                        NoteRow(noteID: noteID)
+                        NoteRow(noteID: noteID, noteSheetMode: $noteSheetMode)
                     }
                 }
             }
@@ -211,6 +218,7 @@ private struct FolderRow: View {
 private struct NoteRow: View {
     @EnvironmentObject private var store: VaultStore
     let noteID: UUID
+    @Binding var noteSheetMode: NoteSheetMode?
 
     var body: some View {
         if let note = store.notes.first(where: { $0.id == noteID }) {
@@ -235,6 +243,10 @@ private struct NoteRow: View {
                 store.select(noteID: note.id)
             }
             .contextMenu {
+                Button("Rename Note") {
+                    store.select(noteID: note.id)
+                    noteSheetMode = .rename(noteID: note.id, currentName: note.displayTitle)
+                }
                 Button("Duplicate Note") {
                     store.select(noteID: note.id)
                     store.duplicateSelectedNote()
@@ -461,10 +473,11 @@ private struct TagCanvasView: View {
 private struct DetailView: View {
     @EnvironmentObject private var store: VaultStore
     @EnvironmentObject private var editorBridge: EditorBridge
+    @Binding var noteSheetMode: NoteSheetMode?
 
     var body: some View {
         if let note = store.selectedNote {
-            NoteEditorView(note: note)
+            NoteEditorView(note: note, noteSheetMode: $noteSheetMode)
                 .onAppear {
                     editorBridge.requestFocus()
                 }
@@ -481,13 +494,25 @@ private struct NoteEditorView: View {
     @EnvironmentObject private var store: VaultStore
     @EnvironmentObject private var editorBridge: EditorBridge
     let note: Note
+    @Binding var noteSheetMode: NoteSheetMode?
 
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
             VStack(alignment: .leading, spacing: 8) {
-                TextField("Title", text: store.noteBinding(note.id, keyPath: \.title))
-                    .textFieldStyle(.plain)
-                    .font(.system(size: 30, weight: .semibold, design: .rounded))
+                HStack(alignment: .center, spacing: 10) {
+                    TextField("Title", text: store.noteBinding(note.id, keyPath: \.title))
+                        .textFieldStyle(.plain)
+                        .font(.system(size: 30, weight: .semibold, design: .rounded))
+
+                    Button {
+                        noteSheetMode = .rename(noteID: note.id, currentName: note.displayTitle)
+                    } label: {
+                        Label("Rename Note", systemImage: "pencil")
+                            .labelStyle(.iconOnly)
+                    }
+                    .buttonStyle(.borderless)
+                    .help("Rename Note")
+                }
 
                 HStack(spacing: 14) {
                     Label(note.relativeFolderPath.isEmpty ? "/" : note.relativeFolderPath, systemImage: "folder")
@@ -688,6 +713,50 @@ private struct FolderSheet: View {
     }
 }
 
+private struct NoteSheet: View {
+    @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject private var store: VaultStore
+    let mode: NoteSheetMode
+    @State private var name = ""
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            Text(mode.title)
+                .font(.title3.weight(.semibold))
+
+            TextField("Note name", text: $name)
+                .textFieldStyle(.roundedBorder)
+                .onAppear {
+                    name = mode.defaultName
+                }
+                .onSubmit {
+                    submit()
+                }
+
+            HStack {
+                Spacer()
+                Button("Cancel") {
+                    dismiss()
+                }
+                Button(mode.confirmationTitle) {
+                    submit()
+                }
+                .buttonStyle(.borderedProminent)
+            }
+        }
+        .padding(24)
+        .frame(width: 360)
+    }
+
+    private func submit() {
+        switch mode {
+        case let .rename(noteID, _):
+            store.renameNote(noteID: noteID, to: name)
+        }
+        dismiss()
+    }
+}
+
 private enum FolderSheetMode: Identifiable {
     case create(parentPath: String)
     case rename(path: String)
@@ -725,6 +794,32 @@ private enum FolderSheetMode: Identifiable {
             ""
         case let .rename(path):
             URL(fileURLWithPath: path).lastPathComponent
+        }
+    }
+}
+
+private enum NoteSheetMode: Identifiable {
+    case rename(noteID: UUID, currentName: String)
+
+    var id: String {
+        switch self {
+        case let .rename(noteID, _):
+            "rename-note-\(noteID.uuidString)"
+        }
+    }
+
+    var title: String {
+        "Rename Note"
+    }
+
+    var confirmationTitle: String {
+        "Rename"
+    }
+
+    var defaultName: String {
+        switch self {
+        case let .rename(_, currentName):
+            currentName
         }
     }
 }
